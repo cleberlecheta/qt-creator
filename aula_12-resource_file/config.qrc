@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/imgs">
+        <file>assets_img/IMG_20220212_181836062.jpg</file>
+        <file>assets_img/Israeli_blue_Star_of_David.png</file>
+    </qresource>
+</RCC>
