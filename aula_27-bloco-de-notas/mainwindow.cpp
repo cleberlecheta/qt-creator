@@ -6,6 +6,11 @@
 #include <QFileDialog>
 #include <QTextStream>
 
+#include <QFontDialog>
+#include <QFont>
+#include <QColorDialog>
+#include <QColor>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -105,5 +110,41 @@ void MainWindow::on_actionColar_triggered()
 void MainWindow::on_actionDesfazer_triggered()
 {
     ui->textEdit->undo();
+}
+
+
+void MainWindow::on_actionFonte_triggered()
+{
+    bool font_ok;
+    QFont fonte = QFontDialog::getFont(&font_ok, this);
+    if (font_ok) {
+        ui->textEdit->setFont(fonte);
+    } else {
+        return;
+    }
+}
+
+
+void MainWindow::on_actionCor_triggered()
+{
+    QColor cor = QColorDialog::getColor(Qt::black, this, "Escolha uma Cor");
+    if (cor.isValid()) {
+        ui->textEdit->setTextColor(cor);
+    }
+}
+
+
+void MainWindow::on_actionCor_do_Fundo_triggered()
+{
+    QColor cor = QColorDialog::getColor(Qt::black, this, "Escolha uma Cor");
+    if (cor.isValid()) {
+        ui->textEdit->setTextBackgroundColor(cor);
+    }
+}
+
+
+void MainWindow::on_actionImprimir_triggered()
+{
+
 }
 

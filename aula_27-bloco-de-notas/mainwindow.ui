@@ -44,6 +44,7 @@
     <addaction name="actionSlavar"/>
     <addaction name="actionSalvar_Novo"/>
     <addaction name="separator"/>
+    <addaction name="actionImprimir"/>
     <addaction name="actionFechar"/>
    </widget>
    <widget class="QMenu" name="menuEditar">
@@ -60,8 +61,17 @@
      <string>Sobre</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuFormatar">
+    <property name="title">
+     <string>Formatar</string>
+    </property>
+    <addaction name="actionFonte"/>
+    <addaction name="actionCor"/>
+    <addaction name="actionCor_do_Fundo"/>
+   </widget>
    <addaction name="menuArquivo"/>
    <addaction name="menuEditar"/>
+   <addaction name="menuFormatar"/>
    <addaction name="menuSobre"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -121,6 +131,26 @@
   <action name="actionDesfazer">
    <property name="text">
     <string>Desfazer</string>
+   </property>
+  </action>
+  <action name="actionFonte">
+   <property name="text">
+    <string>Fonte</string>
+   </property>
+  </action>
+  <action name="actionCor">
+   <property name="text">
+    <string>Cor da Fonte</string>
+   </property>
+  </action>
+  <action name="actionCor_do_Fundo">
+   <property name="text">
+    <string>Cor do Fundo</string>
+   </property>
+  </action>
+  <action name="actionImprimir">
+   <property name="text">
+    <string>Imprimir</string>
    </property>
   </action>
  </widget>

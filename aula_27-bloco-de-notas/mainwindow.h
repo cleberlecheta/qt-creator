@@ -34,6 +34,14 @@ private slots:
 
     void on_actionDesfazer_triggered();
 
+    void on_actionFonte_triggered();
+
+    void on_actionCor_triggered();
+
+    void on_actionCor_do_Fundo_triggered();
+
+    void on_actionImprimir_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString file_place;
